@@ -1,0 +1,74 @@
+﻿@model mvcTraining4.Models.Customer
+
+@{
+    ViewBag.Title = "Sign Up";
+    Layout = "~/Views/Shared/_SignInUpLayout.cshtml";
+}
+
+
+
+
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section"></h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-user-o"></span>
+                            </div>
+                            <h3 class="text-center mb-4">You can create your account in the below.</h3>
+                            <form action="#" class="login-form">
+                                <div class="form-group">
+                                        @Html.EditorFor(model => model.CUSTOMER_NAME, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name" } })
+                                        @Html.ValidationMessageFor(model => model.CUSTOMER_NAME, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                        @Html.EditorFor(model => model.CUSTOMER_EMAIL, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email" } })
+                                        @Html.ValidationMessageFor(model => model.CUSTOMER_EMAIL, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                        @Html.EditorFor(model => model.CUSTOMER_PASSWORD, new { htmlAttributes = new { @class = "form-control", @placeholder = "Password" } })
+                                        @Html.ValidationMessageFor(model => model.CUSTOMER_PASSWORD, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                        @Html.EditorFor(model => model.confirmPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "Confirm Password" } })
+                                        @Html.ValidationMessageFor(model => model.confirmPassword, "", new { @class = "text-danger" })
+                                </div>
+                                
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50">
+                                        <label>
+                                            Go to the login page-->
+                                        </label>
+                                    </div>
+                                    <div class="w-50 text-md-right">
+                                        <a href="/Account/Login">Login</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" value="Create" class="btn btn-primary rounded submit p-3 px-5">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+</body>
+    
+
+    
+

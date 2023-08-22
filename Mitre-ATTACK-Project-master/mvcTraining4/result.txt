@@ -1,0 +1,14 @@
+# Nmap 7.93 scan initiated Wed Jan 18 02:47:23 2023 as: nmap -A -oN result.txt localhost
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00051s latency).
+Other addresses for localhost (not scanned): ::1
+All 1000 scanned ports on localhost (127.0.0.1) are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+Device type: general purpose
+Running: Microsoft Windows 10|2012|7|8.1|2008
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_server_2008:r2
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 18 02:50:47 2023 -- 1 IP address (1 host up) scanned in 204.74 seconds

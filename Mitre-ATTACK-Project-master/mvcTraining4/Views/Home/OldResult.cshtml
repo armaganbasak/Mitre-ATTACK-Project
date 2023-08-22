@@ -1,0 +1,47 @@
+﻿@model IEnumerable<mvcTraining4.Models.AttackInformation>
+
+@{
+    ViewBag.Title = "OldResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color:dimgrey;
+    }
+</style>
+
+
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('/UpConstruction/assets/img/pp.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Past Attacks</h2>
+    </div>
+</div><!-- End Breadcrumbs -->
+<table class="table" style="background-color:dimgrey;color:whitesmoke;text-align:center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ATTACK_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATTACK_DETAIL)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ATTACK_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ATTACK_DETAIL)
+            </td>
+
+        </tr>
+    }
+
+</table>

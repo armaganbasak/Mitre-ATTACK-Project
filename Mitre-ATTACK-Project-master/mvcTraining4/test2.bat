@@ -1,0 +1,1 @@
+nmap -sP localhost -oN result.txt
